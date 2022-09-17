@@ -67,7 +67,7 @@
                                <td>{{$wine->name}}</td>
                                <td>{{$wine->type}}</td>
                                <td>{{$wine->quantity}}</td>
-                               <td>{{$wine->price}}</td>
+                               <td>$ {{$wine->price}}</td>
                                <td>{{$wine->region}}</td>
                                @if(Auth::user()->role == 'staff')
                                <td>
