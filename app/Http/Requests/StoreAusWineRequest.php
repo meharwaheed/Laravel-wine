@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreWineRequest extends FormRequest
+class StoreAusWineRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,11 @@ class StoreWineRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string',
-            'type' => 'required|string',
-            'price' => 'required|integer',
-            'quantity' => 'required|integer',
-            'region' => 'required|string'
+            'wineName' => 'required|string',
+            'wineType' => 'required|string',
+            'winePrice' => 'required|integer',
+            'wineQuantity' => 'required|integer',
+            'wineRegion' => 'required|string'
         ];
     }
 }

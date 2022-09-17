@@ -42,36 +42,36 @@
                 </div>
                 <div class="container">
                     <div>
-                        <div class="fs-2">List of Wines</div>
-                        @if(Auth::user()->role == 'staff')
-                         <a href="{{route('wine.create')}}" class="btn btn-secondary mt-3">Add a new Wine</a>
+                        <div class="fs-2">List of All Wines</div>
+                        @if(Auth::user()->role == 1)
+                         <a href="{{route('getForm')}}" class="btn btn-secondary mt-3">Add Wine</a>
                         @endif
                     </div>
                    <div class="table-responsive mt-3">
-                       <table class="table">
+                       <table class="table table-striped">
                            <thead>
                            <tr>
-                               <th>Name</th>
-                               <th>Type</th>
-                               <th>Quantity</th>
-                               <th>Price</th>
-                               <th>Region</th>
-                               @if(Auth::user()->role == 'staff')
+                               <th>Wine Name</th>
+                               <th>Wine Type</th>
+                               <th>Wine Quantity</th>
+                               <th>Wine Price</th>
+                               <th>Wine Region</th>
+                               @if(Auth::user()->role == 1)
                                <th>Action</th>
                                @endif
                            </tr>
                            </thead>
                            <tbody>
-                           @foreach($wines as $wine)
-                           <tr class="table-secondary border-bottom border-dark">
-                               <td>{{$wine->name}}</td>
-                               <td>{{$wine->type}}</td>
-                               <td>{{$wine->quantity}}</td>
-                               <td>$ {{$wine->price}}</td>
-                               <td>{{$wine->region}}</td>
-                               @if(Auth::user()->role == 'staff')
+                           @foreach($ausWines as $ausWine)
+                           <tr class="border-bottom border-dark">
+                               <td>{{$ausWine->wineName}}</td>
+                               <td>{{$ausWine->wineType}}</td>
+                               <td>{{$ausWine->wineQuantity}}</td>
+                               <td>$ {{$ausWine->winePrice}}</td>
+                               <td>{{$ausWine->wineRegion}}</td>
+                               @if(Auth::user()->role == 1)
                                <td>
-                                   <a href="{{route('wine.edit', [$wine->id])}}" class="btn btn-warning">Edit</a><a href="{{route('destroy_wine',[$wine->id])}}" class="btn btn-danger ms-2">Delete</a>
+                                   <a href="{{route('edit', [$ausWine->id])}}" class="btn btn-warning">Edit</a><a href="{{route('delete',[$ausWine->id])}}" class="btn btn-danger ms-2">Delete</a>
                                </td>
                                @endif
                            </tr>
