@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\AusWine;
+use App\Models\WineAus;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class AusWineSeeder extends Seeder
+class WineAusSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,23 +15,23 @@ class AusWineSeeder extends Seeder
      */
     public function run()
     {
-        AusWine::insert([
+        WineAus::insert([
             [
-                'wineName' => 'Red Wines of au',
-                'wineType' => 'Red Wine',
-                'winePrice'=> 15,
-                'wineQuantity' => 2,
-                'wineRegion' => 'ACT'
+                'name' => 'Rockford',
+                'type' => 'Red Wine',
+                'price'=> 15,
+                'quantity' => 2,
+                'region' => 'ACT'
             ],
             [
-                'name' => 'Alex Russell',
+                'name' => 'Penfolds',
                 'type' => 'Red Wine',
-                'price'=> 28,
-                'quantity' => 5,
+                'price'=> 36,
+                'quantity' => 4,
                 'region' => 'VIC'
             ],
             [
-                'name' => 'White Duck Chardonnay',
+                'name' => 'Mount Mary',
                 'type' => 'White Wine',
                 'price'=> 18,
                 'quantity' => 9,
@@ -40,29 +40,29 @@ class AusWineSeeder extends Seeder
             [
                 'name' => 'Allegiance Wines',
                 'type' => 'Red Wine',
-                'price'=> 40,
+                'price'=> 41,
                 'quantity' => 10,
                 'region' => 'ACT'
             ],
             [
                 'name' => 'Copper Prestige',
                 'type' => 'Sparkling',
-                'price'=> 35,
-                'quantity' => 8,
+                'price'=> 8,
+                'quantity' => 9,
                 'region' => 'NSW'
             ],
             [
-                'name' => 'Delatite Riesling',
+                'name' => 'Moss Wood',
                 'type' => 'White Wine',
-                'price'=> 45,
-                'quantity' => 16,
+                'price'=> 34,
+                'quantity' => 5,
                 'region' => 'SA'
             ],
             [
                 'name' => 'Andrew Garrett',
                 'type' => 'Sparkling',
-                'price'=> 56,
-                'quantity' => 12,
+                'price'=> 39,
+                'quantity' => 9,
                 'region' => 'TAS'
             ],
         ]);

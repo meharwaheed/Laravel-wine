@@ -18,7 +18,7 @@
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <b>{{ $message }}</b>
                                     </span>
                                 @enderror
                             </div>
@@ -32,7 +32,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <b>{{ $message }}</b>
                                     </span>
                                 @enderror
                             </div>
@@ -46,7 +46,7 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <b>{{ $message }}</b>
                                     </span>
                                 @enderror
                             </div>
@@ -71,7 +71,7 @@
                                 </select>
                                 @error('gender')
                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <b>{{ $message }}</b>
                                     </span>
                                 @enderror
                             </div>
@@ -84,7 +84,7 @@
 
                                 @error('address')
                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <b>{{ $message }}</b>
                                     </span>
                                 @enderror
                             </div>
@@ -97,7 +97,7 @@
 
                                 @error('account_number')
                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <b>{{ $message }}</b>
                                     </span>
                                 @enderror
                             </div>
@@ -110,7 +110,7 @@
                                     {{ __('Register') }}
                                 </button>
                                 <a href="{{route('login')}}">
-                                    Already have an account? Login
+                                    Login?
                                 </a>
                             </div>
                         </div>

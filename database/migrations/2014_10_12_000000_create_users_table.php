@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('address');
             $table->string('account_number');
-            $table->tinyInteger('role')->default(0);
+            $table->enum('role',['customer', 'manager'])->default('customer');
             $table->timestamps();
         });
     }
